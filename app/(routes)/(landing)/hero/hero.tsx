@@ -8,7 +8,7 @@ export default function Hero() {
       <Image
         src={heroBg}
         alt="heroBg"
-        className="object-cover -z-10"
+        className="-z-10"
         placeholder="blur"
         priority
         fill
@@ -16,13 +16,13 @@ export default function Hero() {
         sizes="100vw"
       />
       <article className="flex flex-col min-h-screen gap-4 items-center justify-center text-center">
-        <h1 className="text-xl font-semibold text-white">Welcome to</h1>
+        <h1 className="text-xl font-semibold text-gray-light">Welcome to</h1>
         <Image
           src={voidlabsLogo}
           alt="voidlabs logo"
           priority
         />
-        <p className="text-xl text-white">
+        <p className="text-xl text-gray-light">
           where the full potential of blockchain data is unleashed
         </p>
       </article>

@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         "orange-light": "#FF9E00",
         "purple-dark": "#20152C",
+        "gray-light": "rgba(244, 239, 246, 0.80)",
       },
     },
   },

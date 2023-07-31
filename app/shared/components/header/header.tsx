@@ -6,7 +6,7 @@ type HeaderProps = {};
 
 export default function Header({}: HeaderProps) {
   return (
-    <header className="w-full px-5 sm:px-16 py-10 fixed top-0 z-40">
+    <header className="w-full px-5 sm:px-16 py-8 fixed top-0 z-40">
       <div className="flex flex-row items-center justify-center md:justify-between gap-4">
         <Link
           href="/"

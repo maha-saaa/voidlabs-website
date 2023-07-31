@@ -39,7 +39,7 @@ export default function Welcome({}: WelcomeProps) {
           <Image
             src={loadingBg}
             alt="loading background image"
-            className="object-cover -z-10"
+            className="-z-10"
             placeholder="blur"
             priority
             fill
