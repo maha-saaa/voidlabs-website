@@ -15,7 +15,7 @@ export default function Header({}: HeaderProps) {
           <Image src={logo} alt="website logo" priority />
           <span className="text-xl font-medium text-white">voidlabs</span>
         </Link>
-        <nav className="hidden md:flex flex-row gap-10">
+        <nav className="hidden md:flex flex-row gap-10 relative">
           <Link
             href="#home"
             className="group transition-all duration-300 ease-in-out"
@@ -45,9 +45,20 @@ export default function Header({}: HeaderProps) {
             className="group transition-all duration-300 ease-in-out"
           >
             <span className="text-xl font-medium text-white hover:text-orange-light bg-left-bottom bg-gradient-to-r from-orange-light to-orange-light bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-              roadmap
+              Roadmap
             </span>
           </Link>
+          <Link
+            href="#roadmap"
+            className="group transition-all duration-300 ease-in-out"
+          >
+            <span className="text-xl font-medium text-white hover:text-orange-light bg-left-bottom bg-gradient-to-r from-orange-light to-orange-light bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              Mint
+            </span>
+          </Link>
+          <div className="absolute top-5 right-0">
+            <span className="text-[8px] text-white">SOON</span>
+          </div>
         </nav>
         <div className="hidden md:flex w-[119px]" />
       </div>

@@ -17,4 +17,5 @@ html {
 
 body {
   background: var(--purple-dark);
+  cursor: url(../../public/cursor.svg), auto;
 }

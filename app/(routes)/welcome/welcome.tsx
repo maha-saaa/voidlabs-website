@@ -31,7 +31,7 @@ export default function Welcome({}: WelcomeProps) {
           />
           <button
             onClick={displayWelcomeScreen}
-            className="bg-orange-light rounded-[20px] px-4 py-2 sm:px-12 sm:py-5 mb-6"
+            className="px-4 py-2 sm:px-12 sm:py-5 mb-6 rounded-[20px] bg-orange-light"
           >
             <span className="text-white text-xl font-semibold">Enter the void</span>
           </button>

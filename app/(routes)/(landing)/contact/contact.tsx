@@ -11,23 +11,13 @@ import linkedinIcon from "@/public/linkedin-icon.svg";
 export default function Contact() {
   return (
     <section id="contact" className="flex flex-col min-h-screen relative">
-      <Image
-        src={contactBg}
-        alt="contactBg"
-        className="-z-10"
-        placeholder="blur"
-        priority
-        fill
-        quality={100}
-        sizes="100vw"
-      />
       <article className="flex flex-col w-full min-h-screen justify-center items-center px-14 sm:px-24 ">
         <span className={bahiana.className}>
           <h1 className="text-5xl sm:text-8xl text-white text-center pb-4 sm:pb-96">
             stay connected with us
           </h1>
         </span>
-        <p className="text-xl text-gray-light text-center pb-8">
+        <p className="text-xl text-gray-gradient-light text-center pb-8">
           follow us on our social media to stay connected and up to date with
           all metastones news.
         </p>
@@ -76,6 +66,16 @@ export default function Contact() {
           />
         </div>
       </article>
+      <Image
+        src={contactBg}
+        alt="contactBg"
+        className="-z-10"
+        placeholder="blur"
+        priority
+        fill
+        quality={100}
+        sizes="100vw"
+      />
     </section>
   );
 }

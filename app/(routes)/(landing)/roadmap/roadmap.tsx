@@ -9,16 +9,6 @@ import rock4Bg from "@/public/rock-4-bg.webp";
 export default function Roadmap() {
   return (
     <section id="roadmap" className="flex flex-col h-[2208px] relative">
-      <Image
-        src={roadmapBg}
-        alt="roadmapBg"
-        className="-z-10"
-        placeholder="blur"
-        priority
-        fill
-        quality={100}
-        sizes="100vw"
-      />
       <article className="flex flex-col w-full gap-4 px-14 sm:px-24 pt-[438px]">
         <span className="text-8xl font-bold text-white self-center lg:self-end lg:mr-80">
           <h1 className={bahiana.className}>Roadmap</h1>
@@ -34,7 +24,7 @@ export default function Roadmap() {
               quality={100}
               sizes="100vw"
             />
-            <p className="text-gray-light">
+            <p className="text-gray-gradient-light">
               creating a community where like-minded indivisuals can connect and
               speak freely palm & astrology readings center within nft worlds.
             </p>
@@ -49,7 +39,7 @@ export default function Roadmap() {
               quality={100}
               sizes="100vw"
             />
-            <p className="text-gray-light">
+            <p className="text-gray-gradient-light">
               creating a community where like-minded indivisuals can connect and
               speak freely palm & astrology readings center within nft worlds.
             </p>
@@ -65,7 +55,7 @@ export default function Roadmap() {
             quality={100}
             sizes="100vw"
           />
-          <p className="text-gray-light">
+          <p className="text-gray-gradient-light">
             creating a community where like-minded indivisuals can connect and
             speak freely palm & astrology readings center within nft worlds.
           </p>
@@ -80,12 +70,22 @@ export default function Roadmap() {
             quality={100}
             sizes="100vw"
           />
-          <p className="text-gray-light">
+          <p className="text-gray-gradient-light">
             creating a community where like-minded indivisuals can connect and
             speak freely palm & astrology readings center within nft worlds.
           </p>
         </div>
       </article>
+      <Image
+        src={roadmapBg}
+        alt="roadmapBg"
+        className="-z-10"
+        placeholder="blur"
+        priority
+        fill
+        quality={100}
+        sizes="100vw"
+      />
     </section>
   );
 }
