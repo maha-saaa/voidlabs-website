@@ -12,7 +12,7 @@ export default function Header({}: HeaderProps) {
           href="/"
           className="flex flex-row items-center justify-between gap-2"
         >
-          <Image src={logo} alt="website logo" priority />
+          <Image src={logo} alt="logo" priority />
           <span className="text-xl font-medium text-white">voidlabs</span>
         </Link>
         <nav className="hidden md:flex flex-row gap-10 relative">
