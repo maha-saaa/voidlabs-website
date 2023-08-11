@@ -1,27 +1,27 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Hero from "../(landing)/hero/hero";
-import About from "../(landing)/about/about";
-import Faq from "../(landing)/faq/faq";
-import Roadmap from "../(landing)/roadmap/roadmap";
-import Contact from "../(landing)/contact/contact";
+import Home from "../home/home";
+import About from "../about/about";
+import Faq from "../faq/faq";
+import Roadmap from "../roadmap/roadmap";
+import Contact from "../contact/contact";
 import loadingBg from "@/public/loading-bg.webp";
 import voidlabsLogo from "@/public/voidlabs-logo.svg";
 import arrowDownIcon from "@/public/arrow-down-icon.svg";
 
-type WelcomeProps = {};
+type PreloaderProps = {};
 
-export default function Welcome({}: WelcomeProps) {
-  const [showWelcome, setShowWelcome] = useState(true);
+export default function Preloader({}: PreloaderProps) {
+  const [showPreloader, setShowPreloader] = useState(true);
 
   const displayWelcomeScreen = () => {
-    setShowWelcome(false);
+    setShowPreloader(false);
   };
 
   return (
     <>
-      {showWelcome ? (
+      {showPreloader ? (
         <section className="flex flex-col min-h-screen items-center justify-center p-6 relative z-50">
           <Image
             src={voidlabsLogo}
@@ -33,7 +33,9 @@ export default function Welcome({}: WelcomeProps) {
             onClick={displayWelcomeScreen}
             className="px-4 py-2 sm:px-12 sm:py-5 mb-6 rounded-[20px] bg-orange-light"
           >
-            <span className="text-white text-xl font-semibold">Enter the void</span>
+            <span className="text-white text-xl font-semibold">
+              Enter the void
+            </span>
           </button>
           <Image src={arrowDownIcon} alt="arrow-down" />
           <Image
@@ -49,7 +51,7 @@ export default function Welcome({}: WelcomeProps) {
         </section>
       ) : (
         <>
-          <Hero />
+          <Home />
           <About />
           <Faq />
           <Roadmap />

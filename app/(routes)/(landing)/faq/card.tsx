@@ -1,9 +1,12 @@
+import Accordion from "./accordion";
+
 type CardType = {
-  text: string;
+  question: string;
+  answer: any;
   twolines?: boolean;
 };
 
-export default function Card({ text, twolines }: CardType) {
+export default function Card({ question, answer, twolines }: CardType) {
   return (
     <div className="flex flex-row items-center">
       {twolines ? (
@@ -20,9 +23,7 @@ export default function Card({ text, twolines }: CardType) {
           <div className="w-20 sm:w-28 h-0.5 bg-gray-light" />
         </>
       )}
-      <div className="flex  justify-center items-center px-6 py-3 rounded-[20px] border-2 border-gray-light bg-shadow-gradient-light">
-        <h2 className="text-xl font-normal text-gray-light">{text}</h2>
-      </div>
+      <Accordion {...{ question, answer }} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import heroBg from "@/public/hero-bg.webp";
 import voidlabsLogo from "@/public/voidlabs-logo.svg";
 
-export default function Hero() {
+export default function Home() {
   return (
     <section
       id="home"
