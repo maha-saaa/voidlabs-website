@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --purple-dark: #20152c;
+  --purple-medium: #20152c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +16,6 @@ html {
 }
 
 body {
-  background: var(--purple-dark);
+  background: var(--purple-medium);
   cursor: url(../../public/cursor.svg), auto;
 }

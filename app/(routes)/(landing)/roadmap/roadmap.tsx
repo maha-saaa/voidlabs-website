@@ -8,8 +8,8 @@ import rock4Bg from "@/public/rock-4-bg.webp";
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="flex flex-col h-[2208px] relative">
-      <article className="flex flex-col w-full gap-4 px-14 sm:px-24 pt-[438px]">
+    <section id="roadmap" className="flex flex-col h-[2208px] relative bg-purple-dark">
+      <article className="flex flex-col w-full gap-4 px-14 sm:px-24 pt-[438px] z-10">
         <span className="text-8xl font-bold text-white self-center lg:self-end lg:mr-80">
           <h1 className={bahiana.className}>Roadmap</h1>
         </span>
@@ -79,7 +79,6 @@ export default function Roadmap() {
       <Image
         src={roadmapBg}
         alt="roadmapBg"
-        className="-z-10"
         placeholder="blur"
         priority
         fill
