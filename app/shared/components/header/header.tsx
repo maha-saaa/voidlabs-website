@@ -8,12 +8,8 @@ export default function Header({}: HeaderProps) {
   return (
     <header className="w-full px-5 sm:px-16 py-8 fixed top-0 z-40">
       <div className="flex flex-row items-center justify-center md:justify-between gap-4">
-        <Link
-          href="/"
-          className="flex flex-row items-center justify-between gap-2"
-        >
+        <Link href="/">
           <Image src={logo} alt="logo" priority />
-          <span className="text-xl font-medium text-white">voidlabs</span>
         </Link>
         <nav className="hidden md:flex flex-row gap-10 relative">
           <Link

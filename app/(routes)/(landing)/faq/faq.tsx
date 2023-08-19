@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
+import { wordAnimation } from "@/app/shared/animations";
 import { bahiana } from "@/app/styles/fonts";
 import faqBg from "@/public/faq-bg.webp";
 import Card from "./card";
@@ -9,15 +12,31 @@ export default function Faq() {
       <article className="flex flex-col w-full items-center sm:items-end px-14 sm:px-24 pt-56 gap-8 sm:gap-0">
         <div className="flex flex-col sm:flex-row w-full xl:w-[90%] xl:h-[10vh] justify-around items-center gap-8 sm:gap-0">
           <Card question={"What is Voidlabs?"} answer={"What is Voidlabs?"} />
-          <div className="flex flex-col w-full sm:w-[443px] text-white">
-            <span className={bahiana.className}>
-              <h1 className="text-4xl xl:text-8xl text-white">FAQs</h1>
-            </span>
-            <p className="text-gray-gradient-light font-normal">
-              the metaverse is the next evolution of social connection. our
-              company’s vision is to help bring the Metaverse.
-            </p>
-          </div>
+          <FramerMotionWrapper>
+            <div className="flex flex-col w-full sm:w-[443px] text-white">
+              <span className={bahiana.className}>
+                <motion.h1
+                  className="text-4xl xl:text-8xl text-white"
+                  initial="initial"
+                  whileInView="animate"
+                  exit="exit"
+                  variants={wordAnimation}
+                >
+                  FAQs
+                </motion.h1>
+              </span>
+              <motion.p
+                className="text-gray-gradient-light font-normal"
+                initial="initial"
+                whileInView="animate"
+                exit="exit"
+                variants={wordAnimation}
+              >
+                the metaverse is the next evolution of social connection. our
+                company’s vision is to help bring the Metaverse.
+              </motion.p>
+            </div>
+          </FramerMotionWrapper>
         </div>
 
         <div className="flex flex-col sm:flex-row w-full xl:w-[96%] xl:h-[45vh] justify-start items-center sm:gap-[178px]">

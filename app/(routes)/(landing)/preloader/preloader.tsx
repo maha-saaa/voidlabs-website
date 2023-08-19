@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
+import { motion, useIsPresent } from "framer-motion";
 import Home from "../home/home";
 import About from "../about/about";
 import Faq from "../faq/faq";
@@ -14,6 +16,7 @@ type PreloaderProps = {};
 
 export default function Preloader({}: PreloaderProps) {
   const [showPreloader, setShowPreloader] = useState(true);
+  const isPresent = useIsPresent();
 
   const displayWelcomeScreen = () => {
     setShowPreloader(false);
@@ -51,7 +54,22 @@ export default function Preloader({}: PreloaderProps) {
         </section>
       ) : (
         <>
-          <Home />
+          <FramerMotionWrapper>
+            <motion.div
+              initial={{ scaleY: 0 }}
+              animate={{
+                scaleY: 1,
+                transition: { duration: 0.5, ease: "circOut" },
+              }}
+              exit={{
+                scaleY: 1,
+                transition: { duration: 0.5, ease: "circIn" },
+              }}
+              style={{ originY: isPresent ? 1 : 0 }}
+            >
+              <Home />
+            </motion.div>
+          </FramerMotionWrapper>
           <About />
           <Faq />
           <Roadmap />

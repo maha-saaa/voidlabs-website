@@ -1,5 +1,5 @@
 import Image from "next/image";
-import heroBg from "@/public/hero-bg.webp";
+import homeBg from "@/public/home-bg.webp";
 import voidlabsLogo from "@/public/voidlabs-logo.svg";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         </p>
       </article>
       <Image
-        src={heroBg}
+        src={homeBg}
         alt="heroBg"
         className="-z-10"
         placeholder="blur"
