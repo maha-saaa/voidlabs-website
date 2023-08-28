@@ -1,7 +1,6 @@
 import "./styles/globals.css";
 import type { Metadata } from "next";
 import { poppins } from "./styles/fonts";
-import Header from "./shared/components/header/header";
 
 export const metadata: Metadata = {
   title: "Voidlabs",
@@ -16,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
         {children}
       </body>
     </html>
