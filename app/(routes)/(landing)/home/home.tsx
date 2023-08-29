@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="flex flex-col min-h-screen items-center p-6 relative"
+      className="flex flex-col min-h-screen items-center justify-center relative"
     >
-      <article className="flex flex-col min-h-screen gap-4 items-center justify-center text-center">
+      <article className="flex flex-col min-h-screen gap-4 items-center text-center px-6 pt-48">
         <h1 className="text-xl font-semibold text-gray-gradient-light">
           Welcome to
         </h1>

@@ -39,59 +39,61 @@ export default function Preloader({}: PreloaderProps) {
             opacity: 0,
             transition: { duration: 1, ease: "circIn", delay: 2 },
           }}
-          className="flex flex-col min-h-screen items-center justify-center p-6 relative z-50"
+          className="flex flex-col min-h-screen items-center relative z-50"
         >
-          <motion.div
-            key="logoAnimation"
-            initial={{ y: 0 }}
-            animate={{
-              y: 0,
-              transition: { duration: 0.5, ease: "circOut" },
-            }}
-            exit={{
-              y: 500,
-              transition: { duration: 1, ease: "circIn", delay: 2 },
-            }}
-          >
-            <Image
-              src={voidlabsLogo}
-              alt="voidlabsLogo"
-              priority
-              className="mb-8"
-            />
-          </motion.div>
-          <motion.button
-            key="buttonAnimation"
-            initial={{ y: 0 }}
-            animate={{
-              y: 0,
-              transition: { duration: 0.5, ease: "circOut" },
-            }}
-            exit={{
-              y: 400,
-              transition: { duration: 2, ease: "circIn" },
-            }}
-            onClick={displayWelcomeScreen}
-            className="px-4 py-2 sm:px-12 sm:py-5 mb-6 rounded-[20px] bg-orange-light z-10"
-          >
-            <span className="text-white text-xl font-semibold">
-              Enter the void
-            </span>
-          </motion.button>
-          <motion.div
-            key="arrowAnimation"
-            initial={{ y: 0 }}
-            animate={{
-              y: 0,
-              transition: { duration: 0.5, ease: "circOut" },
-            }}
-            exit={{
-              y: 400,
-              transition: { duration: 1, ease: "circIn", delay: 0.5 },
-            }}
-          >
-            <Image src={arrowDownIcon} alt="arrowDownIcon" />
-          </motion.div>
+          <article className="flex flex-col items-center px-6 pt-48">
+            <motion.div
+              key="logoAnimation"
+              initial={{ y: 0 }}
+              animate={{
+                y: 0,
+                transition: { duration: 0.5, ease: "circOut" },
+              }}
+              exit={{
+                y: 500,
+                transition: { duration: 1, ease: "circIn", delay: 2 },
+              }}
+            >
+              <Image
+                src={voidlabsLogo}
+                alt="voidlabsLogo"
+                priority
+                className="mb-4 sm:mb-8"
+              />
+            </motion.div>
+            <motion.button
+              key="buttonAnimation"
+              initial={{ y: 0 }}
+              animate={{
+                y: 0,
+                transition: { duration: 0.5, ease: "circOut" },
+              }}
+              exit={{
+                y: 500,
+                transition: { duration: 2, ease: "circIn" },
+              }}
+              onClick={displayWelcomeScreen}
+              className="px-4 py-2 sm:px-12 sm:py-5 mb-6 rounded-[20px] bg-orange-light z-10"
+            >
+              <span className="text-white text-xl font-semibold">
+                Enter the void
+              </span>
+            </motion.button>
+            <motion.div
+              key="arrowAnimation"
+              initial={{ y: 0 }}
+              animate={{
+                y: 0,
+                transition: { duration: 0.5, ease: "circOut" },
+              }}
+              exit={{
+                y: 500,
+                transition: { duration: 1, ease: "circIn", delay: 0.5 },
+              }}
+            >
+              <Image src={arrowDownIcon} alt="arrowDownIcon" />
+            </motion.div>
+          </article>
           <Image
             src={preloaderBg}
             alt="preloaderBg"
@@ -154,7 +156,7 @@ export default function Preloader({}: PreloaderProps) {
               transition: { duration: 0.5, ease: "circOut" },
             }}
             exit={{
-              y: 400,
+              y: 500,
               transition: { duration: 1, ease: "circIn", delay: 1 },
             }}
             className="w-full absolute bottom-0 left-0 right-0"
