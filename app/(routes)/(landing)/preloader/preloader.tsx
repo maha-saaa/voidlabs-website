@@ -73,9 +73,9 @@ export default function Preloader({}: PreloaderProps) {
                 transition: { duration: 2, ease: "circIn" },
               }}
               onClick={displayWelcomeScreen}
-              className="px-4 py-2 sm:px-12 sm:py-5 mb-6 rounded-[20px] bg-orange-light z-10"
+              className="px-6 py-3 mb-6 rounded-[20px] z-10 bg-gradient-to-b from-orange-light to-orange-medium"
             >
-              <span className="text-white text-xl font-semibold">
+              <span className="text-xl font-semibold text-white ">
                 Enter the void
               </span>
             </motion.button>
@@ -120,7 +120,6 @@ export default function Preloader({}: PreloaderProps) {
             <Image
               src={stars1Bg}
               alt="stars1Bg"
-              placeholder="blur"
               priority
               quality={100}
               sizes="100vw"
@@ -142,7 +141,6 @@ export default function Preloader({}: PreloaderProps) {
             <Image
               src={stars2Bg}
               alt="stars2Bg"
-              placeholder="blur"
               priority
               quality={100}
               sizes="100vw"

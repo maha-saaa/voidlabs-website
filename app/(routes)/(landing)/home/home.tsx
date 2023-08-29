@@ -14,7 +14,8 @@ export default function Home() {
         </h1>
         <Image src={voidlabsLogo} alt="voidlabs logo" priority />
         <p className="text-xl text-gray-gradient-light">
-          where the full potential of blockchain data is unleashed
+          The bridge between
+          <br /> games and the real world
         </p>
       </article>
       <Image

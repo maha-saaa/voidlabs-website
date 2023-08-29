@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         "orange-light": "#FF9E00",
+        "orange-medium": "#FF6D00",
         "orange-gradient-light": "rgba(255, 141, 1, 0.50)",
         "purple-medium": "#20152C",
         "purple-dark": "#0E0527",

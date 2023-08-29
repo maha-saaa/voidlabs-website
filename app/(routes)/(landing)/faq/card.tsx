@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import Accordion from "./accordion";
 
 type CardType = {
-  question: string;
-  answer: any;
+  question: ReactNode;
+  answer: ReactNode;
   twolines?: boolean;
 };
 

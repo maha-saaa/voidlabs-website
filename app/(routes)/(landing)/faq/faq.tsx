@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { wordAnimation } from "@/app/shared/animations";
@@ -9,62 +10,111 @@ import Card from "./card";
 export default function Faq() {
   return (
     <section id="faq" className="flex flex-col min-h-screen relative">
-      <article className="flex flex-col w-full items-center sm:items-end px-14 sm:px-24 pt-56 gap-8 sm:gap-0">
-        <div className="flex flex-col sm:flex-row w-full xl:w-[90%] xl:h-[10vh] justify-around items-center gap-8 sm:gap-0">
-          <Card question={"What is Voidlabs?"} answer={"What is Voidlabs?"} />
+      <article className="flex flex-col w-full px-14 xl:px-44 gap-8 xl:gap-0 z-10">
+        <div className="flex flex-row xl:h-[28vh] xl:items-end justify-center xl:justify-end xl:pr-40">
           <FramerMotionWrapper>
-            <div className="flex flex-col w-full sm:w-[443px] text-white">
-              <span className={bahiana.className}>
-                <motion.h1
-                  className="text-4xl xl:text-8xl text-white"
-                  initial="initial"
-                  whileInView="animate"
-                  exit="exit"
-                  variants={wordAnimation}
-                >
-                  FAQs
-                </motion.h1>
-              </span>
-              <motion.p
-                className="text-gray-gradient-light font-normal"
+            <span className={bahiana.className}>
+              <motion.h1
+                className="text-8xl text-white"
                 initial="initial"
                 whileInView="animate"
                 exit="exit"
                 variants={wordAnimation}
               >
-                the metaverse is the next evolution of social connection. our
-                company’s vision is to help bring the Metaverse.
-              </motion.p>
-            </div>
+                FAQs
+              </motion.h1>
+            </span>
           </FramerMotionWrapper>
         </div>
-
-        <div className="flex flex-col sm:flex-row w-full xl:w-[96%] xl:h-[45vh] justify-start items-center sm:gap-[178px]">
+        <div className="flex flex-row xl:h-[1vh] items-center xl:pl-10">
           <Card
-            question={"How do I get NFTs?"}
-            answer={"How do I get NFTs?"}
+            question={<>What is Voidlabs goal?</>}
+            answer={
+              <>
+                We aim to create fun
+                <br /> P2E games that are
+                <br /> connected to real
+                <br /> world and real
+                <br /> utility.
+              </>
+            }
+          />
+        </div>
+
+        <div className="flex flex-col xl:flex-row xl:h-[40vh] items-center justify-start xl:gap-[170px] xl:pt-44 ">
+          <Card
+            question={
+              <>
+                Where can I learn
+                <br /> more about the
+                <br /> project?
+              </>
+            }
+            answer={
+              <>
+                Please join our
+                <br />
+                <Link
+                  href="https://discord.gg/sEgthVRPRM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  Discord
+                </Link>
+                <br />
+                for full details.
+              </>
+            }
             twolines={true}
           />
           <Card
-            question={"How can we buy your NFTs?"}
-            answer={"the Voidlabs is the next evolution of social connection."}
+            question={<>How does the P2E game work?</>}
+            answer={
+              <>
+                You can stake the NFTs to earn
+                <br /> or also play the game
+                <br /> and earn the prizes.
+              </>
+            }
             twolines={true}
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row w-full xl:w-[80%] xl:h-[12vh] items-end justify-center sm:gap-[158px]">
+        <div className="flex flex-col xl:flex-row xl:h-[30vh] items-center justify-end xl:gap-[158px] xl:pr-20">
           <div className="flex flex-col items-center gap-12">
             <div className="mr-20">
               <Card
-                question={"What are the utilities?"}
-                answer={"What are the utilities?"}
+                question={<>Will there be art upgrade later?</>}
+                answer={
+                  <>
+                    Yes, we will provide 3D <br /> art upgrades.
+                  </>
+                }
               />
             </div>
-            <Card question={"Who are the team?"} answer={"Who are the team?"} />
+            <Card
+              question={<>Who are the Team?</>}
+              answer={
+                <>
+                  You can view each
+                  <br /> team member in
+                  <br /> the about Team
+                  <br /> section.
+                </>
+              }
+            />
           </div>
           <Card
-            question={"Where can I find the NFTs?"}
-            answer={"Where can I find the NFTs?"}
+            question={<>Where can I buy?</>}
+            answer={
+              <>
+                Link for the
+                <br /> Marketplace
+                <br /> will be posted
+                <br /> after mint.
+              </>
+            }
             twolines={true}
           />
         </div>
@@ -72,7 +122,6 @@ export default function Faq() {
       <Image
         src={faqBg}
         alt="faqBg"
-        className="-z-10"
         placeholder="blur"
         priority
         fill

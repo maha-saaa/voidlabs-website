@@ -17,7 +17,7 @@ export default function Roadmap() {
         className="flex flex-col h-[2208px] relative bg-purple-dark"
       >
         <article className="flex flex-col w-full gap-4 px-14 sm:px-24 pt-[438px] z-10">
-          <span className="text-8xl font-bold text-white self-center lg:self-end lg:mr-80">
+          <span className="text-8xl font-bold text-white self-center lg:self-end lg:mr-8">
             <motion.h1
               className={bahiana.className}
               initial="initial"
@@ -25,7 +25,7 @@ export default function Roadmap() {
               exit="exit"
               variants={wordAnimation}
             >
-              Roadmap
+              Voidlabs Roadmap v1
             </motion.h1>
           </span>
           <div className="flex flex-col sm:flex-row sm:justify-between relative">
@@ -41,7 +41,6 @@ export default function Roadmap() {
                 alt="rock1Bg"
                 className="w-[213px] h-[192px] sm:w-[313px] sm:h-[292px]"
                 placeholder="blur"
-                priority
                 quality={100}
                 sizes="100vw"
               />
@@ -64,7 +63,6 @@ export default function Roadmap() {
                 alt="rock2Bg"
                 className="w-[196px] h-[210px] sm:w-[296px] sm:h-[310px]"
                 placeholder="blur"
-                priority
                 quality={100}
                 sizes="100vw"
               />
@@ -88,7 +86,6 @@ export default function Roadmap() {
               alt="rock3Bg"
               className="w-[151px] h-[158px] sm:w-[251px] sm:h-[258px]"
               placeholder="blur"
-              priority
               quality={100}
               sizes="100vw"
             />
@@ -112,7 +109,6 @@ export default function Roadmap() {
               alt="rock4Bg"
               className="w-[140px] h-[169px] sm:w-[240px] sm:h-[269px]"
               placeholder="blur"
-              priority
               quality={100}
               sizes="100vw"
             />

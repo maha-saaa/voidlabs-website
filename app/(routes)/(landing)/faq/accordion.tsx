@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 
 type AccordionProps = {
-  question: string;
-  answer: any;
+  question: ReactNode;
+  answer: ReactNode;
 };
 
 const Accordion = ({ question, answer }: AccordionProps) => {
@@ -15,8 +15,9 @@ const Accordion = ({ question, answer }: AccordionProps) => {
     <FramerMotionWrapper>
       <motion.div
         key="question"
-        className="flex flex-col justify-center items-center px-6 py-3 rounded-[20px] border-2 border-gray-light bg-gray-gradient-medium"
+        className="flex flex-col justify-center px-6 py-3 rounded-[20px] border-2 border-gray-light"
         onClick={() => setIsOpen(!isOpen)}
+        style={{ backgroundColor: isOpen ? "transparent" : "rgba(244, 239, 246, 0.2)" }}
       >
         <motion.p className="text-xl font-normal text-gray-light">
           {question}

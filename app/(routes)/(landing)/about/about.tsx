@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { wordAnimation } from "@/app/shared/animations";
 import { bahiana } from "@/app/styles/fonts";
-import aboutBg from "@/public/about-bg.webp";
+import aboutBg from "@/public/about-bg.svg";
 
 export default function About() {
   return (
@@ -18,7 +18,7 @@ export default function About() {
           <div className="h-[44px] w-2 inline-block m-0 rounded bg-orange-gradient-light" />
         </div>
         <FramerMotionWrapper>
-          <div className="flex flex-col  items-center sm:items-start text-center sm:text-start sm:pl-28">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-start sm:pl-28">
             <span className={bahiana.className}>
               <motion.h1
                 className="text-6xl sm:text-8xl text-white mb-4"
@@ -37,12 +37,11 @@ export default function About() {
               exit="exit"
               variants={wordAnimation}
             >
-              once you taste the space, going back to the
-              <br /> earth is difficult. civic establishments end up
-              <br /> spacefaring or being wiped out.
+              New Builders , New ideas <br /> learn more about our team and
+              project here.
             </motion.p>
-            <button className="w-[151px] bg-orange-light rounded-[20px] px-4 py-2 sm:px-5 sm:py-3">
-              <span className="text-lg sm:text-xl font-semibold text-white ">
+            <button className="px-4 py-2 sm:px-6 sm:py-3 rounded-[20px] bg-gradient-to-b from-orange-light to-orange-medium">
+              <span className="text-lg sm:text-xl font-normal text-white ">
                 View more
               </span>
             </button>
@@ -52,10 +51,8 @@ export default function About() {
       <Image
         src={aboutBg}
         alt="aboutBg"
-        className="-z-10"
-        placeholder="blur"
+        className="w-full absolute top-0 left-0 right-0 -z-10"
         priority
-        fill
         quality={100}
         sizes="100vw"
       />
