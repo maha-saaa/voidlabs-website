@@ -15,7 +15,7 @@ const Accordion = ({ question, answer }: AccordionProps) => {
     <FramerMotionWrapper>
       <motion.div
         key="question"
-        className="flex flex-col justify-center px-6 py-3 rounded-[20px] border-2 border-gray-light"
+        className="flex flex-col justify-center px-6 py-3 rounded-[20px] cursor-pointer border-2 border-gray-light"
         onClick={() => setIsOpen(!isOpen)}
         style={{ backgroundColor: isOpen ? "transparent" : "rgba(244, 239, 246, 0.2)" }}
       >

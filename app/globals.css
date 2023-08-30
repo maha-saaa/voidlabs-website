@@ -17,5 +17,5 @@ html {
 
 body {
   background: var(--purple-medium);
-  cursor: url(../../public/cursor.svg), auto;
+  cursor: url(../public/cursor.svg), auto;
 }
