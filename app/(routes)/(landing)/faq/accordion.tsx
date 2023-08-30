@@ -17,9 +17,18 @@ const Accordion = ({ question, answer }: AccordionProps) => {
         key="question"
         className="flex flex-col justify-center px-6 py-3 rounded-[20px] cursor-pointer border-2 border-gray-light"
         onClick={() => setIsOpen(!isOpen)}
-        style={{ backgroundColor: isOpen ? "transparent" : "rgba(244, 239, 246, 0.2)" }}
+        style={{
+          backgroundColor: isOpen ? "transparent" : "rgba(244, 239, 246, 0.2)",
+        }}
       >
-        <motion.p className="text-xl font-normal text-gray-light">
+        <motion.p
+          className="text-xl font-normal text-gray-light"
+          style={{
+            opacity: isOpen
+              ? 1
+              : 0.5,
+          }}
+        >
           {question}
         </motion.p>
         {isOpen && (

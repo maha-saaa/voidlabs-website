@@ -41,7 +41,7 @@ export default function Faq() {
           />
         </div>
 
-        <div className="flex flex-col xl:flex-row xl:h-[40vh] items-center justify-start xl:gap-[170px] xl:pt-44 ">
+        <div className="flex flex-col xl:flex-row xl:h-[40vh] items-center xl:justify-start xl:gap-[170px] xl:pt-44 ">
           <Card
             question={
               <>
@@ -81,9 +81,8 @@ export default function Faq() {
           />
         </div>
 
-        <div className="flex flex-col xl:flex-row xl:h-[30vh] items-center justify-end xl:gap-[158px] xl:pr-20">
+        <div className="flex flex-col xl:flex-row xl:h-[30vh] items-center xl:justify-end xl:gap-[158px]">
           <div className="flex flex-col items-center gap-12">
-            <div className="mr-20">
               <Card
                 question={<>Will there be art upgrade later?</>}
                 answer={
@@ -92,7 +91,6 @@ export default function Faq() {
                   </>
                 }
               />
-            </div>
             <Card
               question={<>Who are the Team?</>}
               answer={

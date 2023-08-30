@@ -78,7 +78,7 @@ export default function Contact() {
       <Image
         src={contactBg}
         alt="contactBg"
-        className="w-full h-[750px] absolute bottom-0"
+        className="w-full h-[750px] absolute bottom-0 opacity-80"
         placeholder="blur"
         priority
         quality={100}
