@@ -10,7 +10,7 @@ import Card from "./card";
 export default function Faq() {
   return (
     <section id="faq" className="flex flex-col min-h-screen relative">
-      <article className="flex flex-col w-full px-14 xl:px-44 gap-8 xl:gap-0 z-10">
+      <article className="flex flex-col w-full px-14 xl:px-40 gap-8 xl:gap-0 z-10">
         <div className="flex flex-row xl:h-[28vh] xl:items-end justify-center xl:justify-end xl:pr-40">
           <FramerMotionWrapper>
             <span className={bahiana.className}>
@@ -41,7 +41,7 @@ export default function Faq() {
           />
         </div>
 
-        <div className="flex flex-col xl:flex-row xl:h-[40vh] items-center xl:justify-start xl:gap-[170px] xl:pt-44 ">
+        <div className="flex flex-col xl:flex-row xl:h-[40vh] items-center xl:justify-start xl:gap-[170px] xl:pt-44">
           <Card
             question={
               <>
@@ -81,16 +81,16 @@ export default function Faq() {
           />
         </div>
 
-        <div className="flex flex-col xl:flex-row xl:h-[30vh] items-center xl:justify-end xl:gap-[158px]">
+        <div className="flex flex-col xl:flex-row xl:h-[30vh] items-center xl:justify-end xl:gap-[158px] xl:pr-4">
           <div className="flex flex-col items-center gap-12">
-              <Card
-                question={<>Will there be art upgrade later?</>}
-                answer={
-                  <>
-                    Yes, we will provide 3D <br /> art upgrades.
-                  </>
-                }
-              />
+            <Card
+              question={<>Will there be art upgrade later?</>}
+              answer={
+                <>
+                  Yes, we will provide 3D <br /> art upgrades.
+                </>
+              }
+            />
             <Card
               question={<>Who are the Team?</>}
               answer={
