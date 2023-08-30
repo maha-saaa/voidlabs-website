@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import React, { ReactNode, useState } from "react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { wordAnimation } from "@/app/shared/animations";
@@ -8,6 +10,12 @@ import faqBg from "@/public/faq-bg.webp";
 import Card from "./card";
 
 export default function Faq() {
+  const [selectedCardId, setSelectedCardId] = useState(0);
+
+  const onCardClick = (id: number) => {
+    setSelectedCardId(selectedCardId === id ? 0 : id);
+  };
+
   return (
     <section id="faq" className="flex flex-col min-h-screen relative">
       <article className="flex flex-col w-full px-14 xl:px-40 gap-8 xl:gap-0 z-10">
@@ -38,6 +46,9 @@ export default function Faq() {
                 <br /> utility.
               </>
             }
+            id={1}
+            selectedCardId={selectedCardId}
+            onClick={onCardClick}
           />
         </div>
 
@@ -67,6 +78,9 @@ export default function Faq() {
               </>
             }
             twolines={true}
+            id={2}
+            selectedCardId={selectedCardId}
+            onClick={onCardClick}
           />
           <Card
             question={<>How does the P2E game work?</>}
@@ -78,6 +92,9 @@ export default function Faq() {
               </>
             }
             twolines={true}
+            id={3}
+            selectedCardId={selectedCardId}
+            onClick={onCardClick}
           />
         </div>
 
@@ -90,6 +107,9 @@ export default function Faq() {
                   Yes, we will provide 3D <br /> art upgrades.
                 </>
               }
+              id={4}
+              selectedCardId={selectedCardId}
+              onClick={onCardClick}
             />
             <Card
               question={<>Who are the Team?</>}
@@ -101,6 +121,9 @@ export default function Faq() {
                   <br /> section.
                 </>
               }
+              id={5}
+              selectedCardId={selectedCardId}
+              onClick={onCardClick}
             />
           </div>
           <Card
@@ -114,6 +137,9 @@ export default function Faq() {
               </>
             }
             twolines={true}
+            id={6}
+            selectedCardId={selectedCardId}
+            onClick={onCardClick}
           />
         </div>
       </article>

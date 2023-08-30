@@ -5,9 +5,19 @@ type CardType = {
   question: ReactNode;
   answer: ReactNode;
   twolines?: boolean;
+  id: number;
+  selectedCardId: number;
+  onClick: (id: number) => void;
 };
 
-export default function Card({ question, answer, twolines }: CardType) {
+export default function Card({
+  question,
+  answer,
+  twolines,
+  id,
+  selectedCardId,
+  onClick,
+}: CardType) {
   return (
     <div className="flex flex-row items-center">
       {twolines ? (
@@ -24,7 +34,7 @@ export default function Card({ question, answer, twolines }: CardType) {
           <div className="w-20 sm:w-28 h-0.5 bg-gray-light" />
         </>
       )}
-      <Accordion {...{ question, answer }} />
+      <Accordion {...{ question, answer, id, selectedCardId, onClick }} />
     </div>
   );
 }
