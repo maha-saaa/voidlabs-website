@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { wordAnimation } from "@/app/shared/animations";
+import { DISCORD } from "@/app/shared/constants";
 import { bahiana } from "@/app/styles/fonts";
-import faqBg from "@/public/faq-bg.webp";
 import Card from "./card";
+import faqBg from "@/public/faq-bg.webp";
 
 export default function Faq() {
   const [selectedCardId, setSelectedCardId] = useState(0);
@@ -66,7 +67,7 @@ export default function Faq() {
                 Please join our
                 <br />
                 <Link
-                  href="https://discord.gg/sEgthVRPRM"
+                  href={DISCORD}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
