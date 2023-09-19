@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { wordAnimation } from "@/app/shared/animations";
 import { bahiana } from "@/app/styles/fonts";
+import { WHITEPAPER } from "@/app/shared/constants";
 import aboutBg from "@/public/about-bg.svg";
 
 export default function About() {
@@ -40,11 +42,16 @@ export default function About() {
               New Builders , New ideas <br /> learn more about our team and
               project here.
             </motion.p>
-            <button className="px-4 py-2 sm:px-6 sm:py-3 rounded-[20px] bg-gradient-to-b from-orange-light to-orange-medium">
+            <Link
+              href={WHITEPAPER}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 sm:px-6 sm:py-3 rounded-[20px] bg-gradient-to-b from-orange-light to-orange-medium"
+            >
               <span className="text-lg sm:text-xl font-normal text-white ">
-                View more
+                Whitepaper
               </span>
-            </button>
+            </Link>
           </div>
         </FramerMotionWrapper>
       </article>
