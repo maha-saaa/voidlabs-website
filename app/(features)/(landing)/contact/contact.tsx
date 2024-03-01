@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
-import { wordAnimation } from "@/app/shared/animations";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
+import { wordAnimation } from "@/app/utils/animations";
 import { bahiana } from "@/app/styles/fonts";
-import { TWITTER, DISCORD, INSTAGRAM } from "@/app/shared/constants";
+import { TWITTER, DISCORD, INSTAGRAM } from "@/app/utils/constants";
 import contactBg from "@/public/contact-bg.webp";
 import twitterIcon from "@/public/twitter-icon.svg";
 import discordIcon from "@/public/discord-icon.svg";

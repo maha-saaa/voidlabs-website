@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
 import { motion } from "framer-motion";
-import Header from "@/app/shared/components/header/header";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
+import Header from "@/app/components/ui/header/header";
 import Home from "../home/home";
 import About from "../about/about";
 import Faq from "../faq/faq";

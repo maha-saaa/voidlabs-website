@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
-import { wordAnimation } from "@/app/shared/animations";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
+import { wordAnimation } from "@/app/utils/animations";
 import { bahiana } from "@/app/styles/fonts";
-import { WHITEPAPER } from "@/app/shared/constants";
+import { WHITEPAPER } from "@/app/utils/constants";
 import aboutBg from "@/public/about-bg.svg";
 
 export default function About() {

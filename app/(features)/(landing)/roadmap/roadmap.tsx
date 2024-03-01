@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
-import { wordAnimation } from "@/app/shared/animations";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
+import { wordAnimation } from "@/app/utils/animations";
 import { bahiana } from "@/app/styles/fonts";
 import roadmapBg from "@/public/roadmap-bg.webp";
 import rock1Bg from "@/public/rock-1-bg.webp";
@@ -112,7 +112,7 @@ export default function Roadmap() {
               quality={100}
               sizes="100vw"
             />
-          <p className="text-sm sm:text-base text-gray-gradient-light">
+            <p className="text-sm sm:text-base text-gray-gradient-light">
               Game improvement + new games
               <br /> New roadmap reveal
               <br /> art upgrade plan reveal

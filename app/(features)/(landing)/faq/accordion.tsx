@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/shared/components/framer-motion-wrapper/framer-motion-wrapper";
+import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
 
 type AccordionProps = {
   question: ReactNode;
