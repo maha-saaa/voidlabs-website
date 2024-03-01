@@ -1,4 +1,4 @@
-import Preloader from "./(features)/(landing)/preloader/preloader";
+import Preloader from "./(features)/preloader/preloader";
 
 export default function Page() {
   return (
