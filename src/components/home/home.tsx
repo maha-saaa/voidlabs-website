@@ -1,6 +1,6 @@
 import Image from "next/image";
-import homeBg from "@/public/home-bg.webp";
-import voidlabsLogo from "@/public/voidlabs-logo.svg";
+import homeBg from "../../../public/home-bg.webp";
+import voidlabsLogo from "../../../public/voidlabs-logo.svg";
 
 export default function Home() {
   return (

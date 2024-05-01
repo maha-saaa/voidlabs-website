@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
 
 type AccordionProps = {
   question: ReactNode;
@@ -36,25 +35,23 @@ const Accordion = ({
         {question}
       </p>
       {isOpen && (
-        <FramerMotionWrapper>
-          <motion.div
-            className="flex flex-col w-full"
-            key="answer"
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
-            variants={{
-              open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 0 },
-            }}
-            transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
-          >
-            <motion.div className="w-full h-0.5 mt-2 mb-2 bg-gray-gradient-medium" />
-            <motion.p className="text-xl font-normal text-gray-gradient-light">
-              {answer}
-            </motion.p>
-          </motion.div>
-        </FramerMotionWrapper>
+        <motion.div
+          className="flex flex-col w-full"
+          key="answer"
+          initial="collapsed"
+          animate="open"
+          exit="collapsed"
+          variants={{
+            open: { opacity: 1, height: "auto" },
+            collapsed: { opacity: 0, height: 0 },
+          }}
+          transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+        >
+          <motion.div className="w-full h-0.5 mt-2 mb-2 bg-gray-gradient-medium" />
+          <motion.p className="text-xl font-normal text-gray-gradient-light">
+            {answer}
+          </motion.p>
+        </motion.div>
       )}
     </div>
   );

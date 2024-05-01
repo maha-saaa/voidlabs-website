@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
-import { wordAnimation } from "@/app/utils/animations";
-import { DISCORD } from "@/app/utils/constants";
-import { bahiana } from "@/app/styles/fonts";
+import { wordAnimation } from "@/utils/animations";
+import { DISCORD } from "@/utils/constants";
+import { bahiana } from "@/styles/fonts";
 import Card from "./card";
-import faqBg from "@/public/faq-bg.webp";
+import faqBg from "../../../public/faq-bg.webp";
 
 export default function Faq() {
   const [selectedCardId, setSelectedCardId] = useState(0);
@@ -21,19 +20,17 @@ export default function Faq() {
     <section id="faq" className="flex flex-col min-h-screen relative">
       <article className="flex flex-col w-full px-14 xl:px-40 gap-8 xl:gap-0 z-10">
         <div className="flex flex-row xl:h-[28vh] xl:items-end justify-center xl:justify-end xl:pr-40">
-          <FramerMotionWrapper>
-            <span className={bahiana.className}>
-              <motion.h1
-                className="text-8xl text-white"
-                initial="initial"
-                whileInView="animate"
-                exit="exit"
-                variants={wordAnimation}
-              >
-                FAQs
-              </motion.h1>
-            </span>
-          </FramerMotionWrapper>
+          <span className={bahiana.className}>
+            <motion.h1
+              className="text-8xl text-white"
+              initial="initial"
+              whileInView="animate"
+              exit="exit"
+              variants={wordAnimation}
+            >
+              FAQs
+            </motion.h1>
+          </span>
         </div>
         <div className="flex flex-row xl:h-[1vh] items-center xl:pl-10">
           <Card

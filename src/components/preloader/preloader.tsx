@@ -2,19 +2,18 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FramerMotionWrapper } from "@/app/components/framer-motion-wrapper/framer-motion-wrapper";
-import Header from "@/app/components/ui/header/header";
+import Header from "@/components/ui/header/header";
 import Home from "../home/home";
 import About from "../about/about";
 import Faq from "../faq/faq";
 import Roadmap from "../roadmap/roadmap";
 import Contact from "../contact/contact";
-import preloaderBg from "@/public/preloader-bg.webp";
-import stars1Bg from "@/public/stars-1-bg.webp";
-import stars2Bg from "@/public/stars-2-bg.webp";
-import preloaderRock from "@/public/preloader-rock-bg.svg";
-import voidlabsLogo from "@/public/voidlabs-logo.svg";
-import arrowDownIcon from "@/public/arrow-down-icon.svg";
+import preloaderBg from "../../../public/preloader-bg.webp";
+import stars1Bg from "../../../public/stars-1-bg.webp";
+import stars2Bg from "../../../public/stars-2-bg.webp";
+import preloaderRock from "../../../public/preloader-rock-bg.svg";
+import voidlabsLogo from "../../../public/voidlabs-logo.svg";
+import arrowDownIcon from "../../../public/arrow-down-icon.svg";
 
 type PreloaderProps = {};
 
@@ -26,7 +25,7 @@ export default function Preloader({}: PreloaderProps) {
   };
 
   return (
-    <FramerMotionWrapper>
+    <>
       {showPreloader ? (
         <motion.section
           key="preloaderAnimation"
@@ -192,6 +191,6 @@ export default function Preloader({}: PreloaderProps) {
           <Contact />
         </>
       )}
-    </FramerMotionWrapper>
+    </>
   );
 }
