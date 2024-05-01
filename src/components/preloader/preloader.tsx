@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Header from "@/components/ui/header/header";
 import Home from "../home/home";
 import About from "../about/about";
@@ -25,7 +25,7 @@ export default function Preloader({}: PreloaderProps) {
   };
 
   return (
-    <>
+    <AnimatePresence>
       {showPreloader ? (
         <motion.section
           key="preloaderAnimation"
@@ -191,6 +191,6 @@ export default function Preloader({}: PreloaderProps) {
           <Contact />
         </>
       )}
-    </>
+    </AnimatePresence>
   );
 }
